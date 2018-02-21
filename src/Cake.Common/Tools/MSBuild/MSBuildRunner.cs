@@ -180,12 +180,6 @@ namespace Cake.Common.Tools.MSBuild
                 var codes = string.Join(";", settings.WarningsAsMessageCodes);
                 builder.Append($"/warnasmessage:{codes.Quote()}");
             }
-            
-            // Invoke restore target before any other target?
-            if (settings.Restore)
-            {
-                builder.Append("/restore");
-            }
 
             // Add the solution as the last parameter.
             builder.AppendQuoted(solution.MakeAbsolute(_environment).FullPath);

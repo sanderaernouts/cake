@@ -191,18 +191,5 @@ namespace Cake.Common.Tests.Unit.Tools.MSBuild
                 Assert.Empty(settings.WarningsAsMessageCodes);
             }
         }
-
-        public sealed class TheRestoreProperty
-        {
-            [Fact]
-            public void Should_Be_False_By_Default()
-            {
-                //Given
-                var settings = new MSBuildSettings();
-                
-                //Then
-                Assert.False(settings.Restore);
-            }
-        }
     }
 }
